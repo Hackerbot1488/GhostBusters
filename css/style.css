@@ -236,10 +236,16 @@ button {
 .tabs {
 	margin-bottom: 60px;
 }
+.tab {
+	cursor: pointer;
+}
 .tabs__content {
-	display: flex;
+	display: none;
 	align-items: center;
 	flex-wrap: wrap;
+}
+.tabs__content_visible {
+	display: flex;
 }
 .card {
 	display: flex;
@@ -299,6 +305,17 @@ button {
 	line-height: 16px;
 	color: #000;
 	margin-top: 14px;
+}
+.button-next {
+	display: none;
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	right: 0;
+	top: 50px;
+	transform: translateY(-50%);
+	z-index: 99;
+	cursor: pointer;
 }
 @media (max-width: 1200px) {
 	.container {
@@ -444,6 +461,9 @@ button {
 		padding-top: 50px;
 		padding-bottom: 70px;
 	}
+	.news__card {
+		max-width: 90%;
+	}
 	.header {
 		padding-right: 2.5%;
 		padding-left: 2.5%;
@@ -454,6 +474,9 @@ button {
 	.mobile-buttons {
 		display: block;
 		margin-left: auto;
+	}
+	.button-next {
+		display: none;
 	}
 }
 @media (max-width: 576px) {
